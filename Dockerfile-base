@@ -20,6 +20,8 @@ RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/JMeterPlugins-S
 
 RUN wget -q -O /jmeter/apache-jmeter-$JMETER_VERSION/lib/ext/pepper-box-1.0.jar https://github.com/raladev/load/blob/master/JARs/pepper-box-1.0.jar?raw=true
 
+RUN wget -q -O /jmeter/apache-jmeter-$JMETER_VERSION/lib/ext/mysql-connector-java-8.0.15.jar http://dev.2ns.io/mysql-connector-java-8.0.15.jar
+
 RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/bzm-parallel-0.7.zip https://jmeter-plugins.org/files/packages/bzm-parallel-0.7.zip && unzip -n /tmp/bzm-parallel-0.7.zip && rm /tmp/bzm-parallel-0.7.zip
 
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/

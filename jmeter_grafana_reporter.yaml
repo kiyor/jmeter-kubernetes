@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: jmreporter
-        image: kubernautslabs/jmeter-reporter:latest
+        image: quay.io/kiyor/jmeter-reporter:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8686
